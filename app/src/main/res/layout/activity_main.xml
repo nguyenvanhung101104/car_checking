@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_blue"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_disconnect"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_ecu_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ecu_id_label"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/text_grey" />
+
+            <!-- Dashboard Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:rowCount="3">
+
+                <!-- 9 Items here -->
+                <include layout="@layout/dashboard_item" android:id="@+id/item_dashboard" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_live_data" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_sensors" />
+
+                <include layout="@layout/dashboard_item" android:id="@+id/item_dtc" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_freeze_frame" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_monitors" />
+
+                <include layout="@layout/dashboard_item" android:id="@+id/item_acceleration" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_emission" />
+                <include layout="@layout/dashboard_item" android:id="@+id/item_terminal" />
+
+            </GridLayout>
+
+            <!-- Real-time Summary Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView android:id="@+id/tv_rpm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RPM: 0" android:textStyle="bold" />
+                    <TextView android:id="@+id/tv_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed: 0 km/h" />
+                    <TextView android:id="@+id/tv_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temp: 0 °C" />
+                    <TextView android:id="@+id/tv_load" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Load: 0 %" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/tv_connection_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ELM Status: Disconnected"
+                android:textColor="@color/status_green"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_disconnect"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/disconnect_red"
+        android:text="@string/btn_disconnect"
+        android:textColor="@color/white"
+        app:cornerRadius="0dp" />
+
+</RelativeLayout>

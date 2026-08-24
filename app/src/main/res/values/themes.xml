@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.OBD2Diagnostic" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="android:statusBarColor">@color/primary_blue</item>
+    </style>
+</resources>
