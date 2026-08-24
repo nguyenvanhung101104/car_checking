@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">OBD2 Diagnostic</string>
+    <string name="app_name">Car Scanner Pro</string>
+    <string name="ecu_id_label">ECU ID: 7E8</string>
+
+    <!-- Grid Items -->
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_live_data">Live data</string>
+    <string name="menu_all_sensors">All sensors</string>
+    <string name="menu_dtc">Diagnostic trouble codes</string>
+    <string name="menu_freeze_frame">Freeze frame</string>
+    <string name="menu_monitors">Noncontinuous Monitors</string>
+    <string name="menu_acceleration">Acceleration tests</string>
+    <string name="menu_emission">Emission tests</string>
+    <string name="menu_terminal">Terminal</string>
+
+    <!-- Details -->
+    <string name="protocol_label">OBD2 protocol:</string>
+    <string name="protocol_value">ISO 15765-4 CAN (11 bit ID, 500 kbaud)</string>
+    <string name="vin_label">VIN:</string>
+    <string name="vin_value">U5YPC81ADEL481735</string>
+    <string name="calibration_id_label">Calibration Id:</string>
+    <string name="calibration_id_value">ZL4YP2AS1F1C</string>
+
+    <!-- Status -->
+    <string name="elm_connection">ELM connection:</string>
+    <string name="ecu_connection">ECU connection:</string>
+    <string name="status_connected">Connected</string>
+
+    <!-- Footer -->
+    <string name="btn_disconnect">DISCONNECT</string>
 </resources>
