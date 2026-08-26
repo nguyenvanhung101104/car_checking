@@ -31,6 +31,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.TerminalActivity" />
+        <activity android:name=".ui.DtcActivity" />
+
     </application>
 
 </manifest>

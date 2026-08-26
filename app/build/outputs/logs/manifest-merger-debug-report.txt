@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:2:1-39:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dell\.gradle\caches\9.5.0\transforms\4ae106750baf191c66f0079510672961\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Dell\.gradle\caches\9.5.0\transforms\9722f110b028c093bd7471f732245c9f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\Dell\.gradle\caches\9.5.0\transforms\95cc9d8bf6941a4ddfb4f0f9abf24dce\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -100,8 +100,8 @@ ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidMan
 	android:name
 		ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:13:22-78
 application
-ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:15:5-34:19
-INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:15:5-34:19
+ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:15:5-37:19
+INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:15:5-37:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dell\.gradle\caches\9.5.0\transforms\4ae106750baf191c66f0079510672961\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Dell\.gradle\caches\9.5.0\transforms\4ae106750baf191c66f0079510672961\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Dell\.gradle\caches\9.5.0\transforms\9722f110b028c093bd7471f732245c9f\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -156,6 +156,14 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
 		ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:30:27-74
+activity#com.example.obd2diagnostic.ui.TerminalActivity
+ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:34:9-57
+	android:name
+		ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:34:19-54
+activity#com.example.obd2diagnostic.ui.DtcActivity
+ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:35:9-52
+	android:name
+		ADDED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml:35:19-49
 uses-sdk
 INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Dell\Documents\GitHub\OBD2Diagnostic\app\src\main\AndroidManifest.xml

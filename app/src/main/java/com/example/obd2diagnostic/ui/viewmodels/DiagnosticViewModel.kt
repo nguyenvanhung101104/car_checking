@@ -29,12 +29,32 @@ class DiagnosticViewModel(application: Application) : AndroidViewModel(applicati
     private val _engineLoad = MutableLiveData<String>("0 %")
     val engineLoad: LiveData<String> = _engineLoad
 
+    private val _vin = MutableLiveData<String>("---")
+    val vin: LiveData<String> = _vin
+
+    private val _protocol = MutableLiveData<String>("---")
+    val protocol: LiveData<String> = _protocol
+
     private var isReading = false
+
+    fun getPairedDevices() = repository.getPairedDevices()
+
+    fun isBluetoothEnabled() = repository.isBluetoothEnabled()
 
     fun connectToDevice(address: String) {
         viewModelScope.launch {
             _connectionStatus.postValue("Connecting...")
             if (repository.connect(address)) {
+                // Initialize OBD
+                if (address != "MOCK_DEVICE") {
+                    repository.runCommand(ResetCommand())
+                    repository.runCommand(EchoOffCommand())
+                    repository.runCommand(LineFeedOffCommand())
+                    repository.runCommand(SelectProtocolAutoCommand())
+                    
+                    _vin.postValue(repository.runCommand(VinCommand()))
+                    _protocol.postValue(repository.runCommand(ProtocolCommand()))
+                }
                 _connectionStatus.postValue("Connected")
                 startReadingData()
             } else {

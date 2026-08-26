@@ -14,6 +14,10 @@ class ObdRepository(
         return bluetoothManager.connect(address)
     }
 
+    fun getPairedDevices() = bluetoothManager.getPairedDevices()
+
+    fun isBluetoothEnabled() = bluetoothManager.isBluetoothEnabled()
+
     fun disconnect() {
         bluetoothManager.disconnect()
     }

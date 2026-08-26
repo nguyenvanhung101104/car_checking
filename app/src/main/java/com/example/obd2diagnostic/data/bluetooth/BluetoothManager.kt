@@ -19,6 +19,15 @@ class BluetoothManager {
     var isConnected = false
         private set
 
+    fun isBluetoothEnabled(): Boolean {
+        return adapter?.isEnabled == true
+    }
+
+    @SuppressLint("MissingPermission")
+    fun getPairedDevices(): List<BluetoothDevice> {
+        return adapter?.bondedDevices?.toList() ?: emptyList()
+    }
+
     @SuppressLint("MissingPermission")
     suspend fun connect(deviceAddress: String): Boolean = withContext(Dispatchers.IO) {
         if (deviceAddress == "MOCK_DEVICE") {

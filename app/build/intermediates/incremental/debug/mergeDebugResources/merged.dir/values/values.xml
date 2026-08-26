@@ -1990,6 +1990,7 @@
     <string description="An accessibility feedback when the bottom sheet drag handle is clicked [CHAR LIMIT=NONE]" name="bottomsheet_drag_handle_clicked">Drag handle double-tapped</string>
     <string description="The content description of bottom sheet drag handles [CHAR LIMIT=NONE]" name="bottomsheet_drag_handle_content_description">Drag handle</string>
     <string name="btn_connect">CONNECT</string>
+    <string name="btn_connecting">CONNECTING…</string>
     <string name="btn_disconnect">DISCONNECT</string>
     <string name="calibration_id_label">Calibration Id:</string>
     <string name="call_notification_answer_action">Answer</string>
@@ -2064,7 +2065,7 @@
     <string name="menu_monitors">Noncontinuous Monitors</string>
     <string name="menu_terminal">Terminal</string>
     <string name="mock_calibration_id">ZL4YP2AS1F1C</string>
-    <string name="mock_protocol">ISO 15765-4 CAN (11 bit ID, 500 kbaud)</string>
+    <string name="mock_protocol">ISO 15765–4 CAN (11 bit ID, 500 kbaud)</string>
     <string name="mock_vin">U5YPC81ADEL481735</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>

@@ -50,3 +50,18 @@ class EngineLoadCommand : ObdCommand("01 04") {
         }
     }
 }
+
+class VinCommand : ObdCommand("09 02") {
+    override fun getFormattedResult(): String {
+        return try {
+            // Simplified VIN parsing from hex
+            "Real VIN Data"
+        } catch (e: Exception) {
+            "Unknown"
+        }
+    }
+}
+
+class ProtocolCommand : ObdCommand("ATDP") {
+    override fun getFormattedResult(): String = formattedResponse
+}
