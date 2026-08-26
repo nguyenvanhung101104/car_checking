@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_monitors.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_monitors.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_sensors.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_sensors.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\mipmap_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\mipmap\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\layout_dashboard_item.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\layout\\dashboard_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_freeze_frame.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_freeze_frame.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_acceleration.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_acceleration.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_dashboard.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_terminal.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_terminal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_settings.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.obd2diagnostic.app-debug-38:/layout_activity_main.xml.flat",
+        "source": "com.example.obd2diagnostic.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.obd2diagnostic.app-debug-38:/layout_dashboard_item.xml.flat",
+        "source": "com.example.obd2diagnostic.app-main-40:/layout/dashboard_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_fuel.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_fuel.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_emission.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_emission.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\mipmap_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\mipmap\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_dtc.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_dtc.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-debug-38:\\drawable_ic_live_data.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\9.5.0\\com.example.obd2diagnostic.app-main-40:\\drawable\\ic_live_data.xml"
+    }
+]

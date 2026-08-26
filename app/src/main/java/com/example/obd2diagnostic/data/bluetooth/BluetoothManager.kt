@@ -21,6 +21,10 @@ class BluetoothManager {
 
     @SuppressLint("MissingPermission")
     suspend fun connect(deviceAddress: String): Boolean = withContext(Dispatchers.IO) {
+        if (deviceAddress == "MOCK_DEVICE") {
+            isConnected = true
+            return@withContext true
+        }
         try {
             val device: BluetoothDevice = adapter?.getRemoteDevice(deviceAddress) ?: return@withContext false
             socket = device.createRfcommSocketToServiceRecord(sppUuid)
@@ -36,6 +40,16 @@ class BluetoothManager {
 
     suspend fun sendCommand(command: ObdCommand): String = withContext(Dispatchers.IO) {
         if (!isConnected) return@withContext "Not Connected"
+        
+        // Nếu là Emulator hoặc Mock Mode
+        if (socket == null) {
+            val mockRes = com.example.obd2diagnostic.utils.MockObdServer.getMockResponse(command.command)
+            command.rawResponse = mockRes
+            // Giả lập việc clean response
+            command.cleanResponse()
+            return@withContext command.getFormattedResult()
+        }
+
         try {
             val socket = socket ?: return@withContext "Socket Null"
             command.run(socket.inputStream, socket.outputStream)

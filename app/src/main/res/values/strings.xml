@@ -26,4 +26,10 @@
 
     <!-- Footer -->
     <string name="btn_disconnect">DISCONNECT</string>
+    <string name="btn_connect">CONNECT</string>
+
+    <!-- Details Values -->
+    <string name="mock_protocol">ISO 15765-4 CAN (11 bit ID, 500 kbaud)</string>
+    <string name="mock_vin">U5YPC81ADEL481735</string>
+    <string name="mock_calibration_id">ZL4YP2AS1F1C</string>
 </resources>

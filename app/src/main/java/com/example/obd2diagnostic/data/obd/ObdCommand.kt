@@ -31,7 +31,7 @@ abstract class ObdCommand(val command: String) {
         cleanResponse()
     }
 
-    private fun cleanResponse() {
+    fun cleanResponse() {
         // Loại bỏ echo và khoảng trắng
         formattedResponse = rawResponse.replace("\\s".toRegex(), "")
             .replace(command.replace("\\s".toRegex(), ""), "")

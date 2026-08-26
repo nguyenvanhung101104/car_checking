@@ -60,6 +60,14 @@ class DiagnosticViewModel(application: Application) : AndroidViewModel(applicati
         isReading = false
         repository.disconnect()
         _connectionStatus.postValue("Disconnected")
+        clearData()
+    }
+
+    private fun clearData() {
+        _rpm.postValue("0 RPM")
+        _speed.postValue("0 km/h")
+        _coolantTemp.postValue("0 °C")
+        _engineLoad.postValue("0 %")
     }
 
     override fun onCleared() {
