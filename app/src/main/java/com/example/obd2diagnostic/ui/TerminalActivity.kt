@@ -47,7 +47,7 @@ class TerminalActivity : AppCompatActivity() {
         tvOutput.append("\n> $cmd")
         
         lifecycleScope.launch {
-            val response = BluetoothManager.getInstance().sendCommand(object : ObdCommand(cmd) {
+            val response = BluetoothManager.getInstance(this@TerminalActivity).sendCommand(object : ObdCommand(cmd) {
                 override fun getFormattedResult(): String = rawResponse
             })
             tvOutput.append("\n$response")

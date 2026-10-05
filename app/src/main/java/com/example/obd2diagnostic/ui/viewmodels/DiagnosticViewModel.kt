@@ -12,86 +12,60 @@ import kotlinx.coroutines.launch
 class DiagnosticViewModel(application: Application) : AndroidViewModel(application) {
 
     private val database = AppDatabase.getDatabase(application)
-    private val repository = ObdRepository(BluetoothManager.getInstance(), database.diagnosticDao())
+    private val repository = ObdRepository.getInstance(
+        BluetoothManager.getInstance(application), 
+        database.diagnosticDao()
+    )
 
     private val _connectionStatus = MutableLiveData<String>("Disconnected")
     val connectionStatus: LiveData<String> = _connectionStatus
 
-    private val _rpm = MutableLiveData<String>("0 RPM")
-    val rpm: LiveData<String> = _rpm
-
-    private val _speed = MutableLiveData<String>("0 km/h")
-    val speed: LiveData<String> = _speed
-
-    private val _coolantTemp = MutableLiveData<String>("0 °C")
-    val coolantTemp: LiveData<String> = _coolantTemp
-
-    private val _engineLoad = MutableLiveData<String>("0 %")
-    val engineLoad: LiveData<String> = _engineLoad
-
-    private val _vin = MutableLiveData<String>("---")
-    val vin: LiveData<String> = _vin
-
-    private val _protocol = MutableLiveData<String>("---")
-    val protocol: LiveData<String> = _protocol
-
-    private var isReading = false
+    // Expose repository flows as LiveData for activities
+    val rpm: LiveData<String> = repository.rpm.asLiveData()
+    val speed: LiveData<String> = repository.speed.asLiveData()
+    val coolantTemp: LiveData<String> = repository.coolantTemp.asLiveData()
+    val engineLoad: LiveData<String> = repository.engineLoad.asLiveData()
+    val vin: LiveData<String> = repository.vin.asLiveData()
+    val protocol: LiveData<String> = repository.protocol.asLiveData()
+    val sensors: LiveData<Map<String, String>> = repository.sensors.asLiveData()
 
     fun getPairedDevices() = repository.getPairedDevices()
-
     fun isBluetoothEnabled() = repository.isBluetoothEnabled()
+    fun isConnected() = repository.isConnected()
 
     fun connectToDevice(address: String) {
         viewModelScope.launch {
             _connectionStatus.postValue("Connecting...")
-            if (repository.connect(address)) {
+            val result = repository.connect(address)
+            
+            if (result.isSuccess) {
                 // Initialize OBD
                 if (address != "MOCK_DEVICE") {
+                    delay(500)
                     repository.runCommand(ResetCommand())
+                    delay(500)
                     repository.runCommand(EchoOffCommand())
+                    delay(200)
                     repository.runCommand(LineFeedOffCommand())
+                    delay(200)
                     repository.runCommand(SelectProtocolAutoCommand())
-                    
-                    _vin.postValue(repository.runCommand(VinCommand()))
-                    _protocol.postValue(repository.runCommand(ProtocolCommand()))
+                    delay(500)
                 }
                 _connectionStatus.postValue("Connected")
-                startReadingData()
+                repository.startReadingData()
             } else {
-                _connectionStatus.postValue("Connection Failed")
-            }
-        }
-    }
-
-    private fun startReadingData() {
-        isReading = true
-        viewModelScope.launch {
-            while (isReading) {
-                _rpm.postValue(repository.runCommand(RPMCommand()))
-                _speed.postValue(repository.runCommand(SpeedCommand()))
-                _coolantTemp.postValue(repository.runCommand(TempCommand()))
-                _engineLoad.postValue(repository.runCommand(EngineLoadCommand()))
-                delay(1000)
+                val error = result.exceptionOrNull()?.message ?: "Unknown Error"
+                _connectionStatus.postValue("Failed: $error")
             }
         }
     }
 
     fun stopReadingData() {
-        isReading = false
         repository.disconnect()
         _connectionStatus.postValue("Disconnected")
-        clearData()
-    }
-
-    private fun clearData() {
-        _rpm.postValue("0 RPM")
-        _speed.postValue("0 km/h")
-        _coolantTemp.postValue("0 °C")
-        _engineLoad.postValue("0 %")
     }
 
     override fun onCleared() {
         super.onCleared()
-        stopReadingData()
     }
 }

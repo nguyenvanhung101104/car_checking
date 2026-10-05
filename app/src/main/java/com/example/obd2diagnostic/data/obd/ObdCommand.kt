@@ -10,6 +10,11 @@ abstract class ObdCommand(val command: String) {
 
     @Throws(Exception::class)
     fun run(inputStream: InputStream, outputStream: OutputStream) {
+        // Clear input buffer before sending
+        while (inputStream.available() > 0) {
+            inputStream.read()
+        }
+        
         sendCommand(outputStream)
         readResponse(inputStream)
     }
@@ -22,19 +27,31 @@ abstract class ObdCommand(val command: String) {
     private fun readResponse(inputStream: InputStream) {
         val res = StringBuilder()
         var b: Int
+        val startTime = System.currentTimeMillis()
+        val timeout = 2000L // 2 seconds timeout
+
         while (true) {
-            b = inputStream.read()
-            if (b == -1 || b.toChar() == '>') break
-            res.append(b.toChar())
+            if (System.currentTimeMillis() - startTime > timeout) {
+                break
+            }
+            
+            if (inputStream.available() > 0) {
+                b = inputStream.read()
+                if (b == -1 || b.toChar() == '>') break
+                res.append(b.toChar())
+            } else {
+                Thread.sleep(10)
+            }
         }
         rawResponse = res.toString().trim()
         cleanResponse()
     }
 
     fun cleanResponse() {
-        // Loại bỏ echo và khoảng trắng
+        // Loại bỏ khoảng trắng, dấu nhắc lệnh và các ký tự điều khiển
         formattedResponse = rawResponse.replace("\\s".toRegex(), "")
-            .replace(command.replace("\\s".toRegex(), ""), "")
+            .replace(">".toRegex(), "")
+            .uppercase()
     }
 
     abstract fun getFormattedResult(): String

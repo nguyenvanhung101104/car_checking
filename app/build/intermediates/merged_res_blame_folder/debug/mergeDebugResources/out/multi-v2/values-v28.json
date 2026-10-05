@@ -4,7 +4,7 @@
             "outputFile": "com.example.obd2diagnostic.app-mergeDebugResources-36:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\4ae106750baf191c66f0079510672961\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\d4957aec10e9d5c86983f2ea734765ed\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\6dcab399f29a675a3cc5c313c93ed57e\\transformed\\appcompat-1.7.0\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\70a652a2e564eca24bb6c7e3e5905c58\\transformed\\appcompat-1.7.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

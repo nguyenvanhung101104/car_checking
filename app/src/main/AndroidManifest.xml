@@ -33,6 +33,8 @@
 
         <activity android:name=".ui.TerminalActivity" />
         <activity android:name=".ui.DtcActivity" />
+        <activity android:name=".ui.DashboardActivity" />
+        <activity android:name=".ui.LiveDataActivity" />
 
     </application>
 

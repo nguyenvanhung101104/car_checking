@@ -53,6 +53,8 @@
         </activity>
         <activity android:name="com.example.obd2diagnostic.ui.TerminalActivity" />
         <activity android:name="com.example.obd2diagnostic.ui.DtcActivity" />
+        <activity android:name="com.example.obd2diagnostic.ui.DashboardActivity" />
+        <activity android:name="com.example.obd2diagnostic.ui.LiveDataActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

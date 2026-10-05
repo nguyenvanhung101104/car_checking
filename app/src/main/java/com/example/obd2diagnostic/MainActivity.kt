@@ -169,11 +169,25 @@ class MainActivity : AppCompatActivity() {
     private fun handleModuleClick(textRes: Int) {
         val moduleName = getString(textRes)
         when (textRes) {
+            R.string.menu_dashboard -> {
+                startActivity(Intent(this, com.example.obd2diagnostic.ui.DashboardActivity::class.java))
+            }
+            R.string.menu_live_data, R.string.menu_all_sensors, R.string.menu_monitors, 
+            R.string.menu_acceleration, R.string.menu_emission -> {
+                startActivity(Intent(this, com.example.obd2diagnostic.ui.LiveDataActivity::class.java).apply {
+                    putExtra("MODULE_NAME", moduleName)
+                })
+            }
             R.string.menu_terminal -> {
                 startActivity(Intent(this, com.example.obd2diagnostic.ui.TerminalActivity::class.java))
             }
             R.string.menu_dtc -> {
                 startActivity(Intent(this, com.example.obd2diagnostic.ui.DtcActivity::class.java))
+            }
+            R.string.menu_freeze_frame -> {
+                startActivity(Intent(this, com.example.obd2diagnostic.ui.DtcActivity::class.java).apply {
+                    putExtra("MODE", "FREEZE_FRAME")
+                })
             }
             else -> {
                 Toast.makeText(this, "Module $moduleName coming soon", Toast.LENGTH_SHORT).show()

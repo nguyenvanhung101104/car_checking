@@ -4,7 +4,7 @@
             "outputFile": "com.example.obd2diagnostic.app-mergeDebugResources-36:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\4ae106750baf191c66f0079510672961\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\Dell\\.gradle\\caches\\9.5.0\\transforms\\d4957aec10e9d5c86983f2ea734765ed\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
